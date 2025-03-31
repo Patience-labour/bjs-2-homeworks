@@ -7,14 +7,6 @@ function getArrayParams(...arr) {
 
   for (let i = 0; i < arr.length; i++) {
     let element = arr[i];
-
-    if (element > max) {
-      max = Math.max();
-    }
-
-    if (element < min) {
-      min = Math.min();
-    }
     sum += element;
   }
 
@@ -25,17 +17,10 @@ function getArrayParams(...arr) {
 getArrayParams(1, 2, 3, 4, 5, 6, 7, 8, 90)
 
 function summElementsWorker(...arr) {
-  if (arr.length === 0) {
-    return 0;
-  }
   return arr.reduce((acc, curr) => acc + curr, 0)
 }
 
 function differenceMaxMinWorker(...arr) {
-  if (arr.length === 0) {
-    return 0;
-  }
-
   let max = Math.max(...arr);
   let min = Math.min(...arr);
   return max - min;
