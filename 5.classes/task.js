@@ -1,9 +1,9 @@
 class PrintEditionItem {
     #state
-    constructor (name, releaseDate, pageCount) {
+    constructor (name, releaseDate, pagesCount) {
         this.name = name;
         this.releaseDate = releaseDate;
-        this.pageCount = pageCount;
+        this.pagesCount = pagesCount;
         this.#state = 100;
         this.type = null;
     }
@@ -94,15 +94,3 @@ class Library {
         return null;
     }
 }
-
-const book = new DetectiveBook(
-    "Меч Предназначения",  // name
-    1992,                    // releaseDate
-    384,                     // pageCount
-    "А. Сапковский"          // author
-);
-
-console.log(book.author); // "А. Сапковский"
-console.log(book.name); // "Меч Предназначения"
-console.log(book.releaseDate); // 1992
-console.log(book.pageCount); // 384
