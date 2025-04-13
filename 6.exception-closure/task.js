@@ -1,6 +1,6 @@
 ﻿function parseCount(value) {
     let parseValue = Number.parseFloat(value);
-    if (+isNaN(value)) {
+    if (Number.isNaN(value)) {
         throw new Error('Невалидное значение')
     }
     return parseValue;
@@ -36,8 +36,7 @@ class Triangle {
 
 function getTriangle(a, b, c) {
     try {
-        let triangle = new Triangle(a, b, c);
-        return triangle;
+        return new Triangle(a, b, c);
     } catch (error) {
         return {
             get perimeter() {
